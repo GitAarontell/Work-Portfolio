@@ -8,9 +8,6 @@ function Title() {
         console.log(setUp[0].getTotalLength());
     });
 
-    
-
-
     return (
         <div className='titlePage'>
 
