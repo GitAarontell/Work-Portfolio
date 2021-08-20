@@ -1,15 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './TitleStyles.css';
 
 function Title() {
 
+    useEffect(() =>{
+        let setUp = document.querySelectorAll('#downwardsTree path');
+        console.log(setUp[0].getTotalLength());
+    });
 
-    //let setUp = document.querySelectorAll("#setUp path");
+    
 
-    //console.log(setUp[0].getTotalLength());
 
     return (
         <div className='titlePage'>
+
+            <div className="tabs">
+                <h1>Projects</h1>
+                <h1>Skills</h1>
+                <h1>About</h1>
+                <h1>Contact</h1>
+            </div>
+
             <svg id='name' width="209" height="29" viewBox="0 0 209 29" fill="#faebd7" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.94727 27L11.8438 1.23047H15.5176L26.0645 27H22.1797L19.1738 19.1953H8.39844L5.56836 27H1.94727ZM9.38281 16.418H18.1191L15.4297 9.28125C14.6094 7.11328 14 5.33203 13.6016 3.9375C13.2734 5.58984 12.8105 7.23047 12.2129 8.85938L9.38281 16.418Z" stroke="black" strokeWidth="2" mask="url(#path-1-outside-1)" />
                 <path d="M40.5664 24.6973C39.3945 25.6934 38.2637 26.3965 37.1738 26.8066C36.0957 27.2168 34.9355 27.4219 33.6934 27.4219C31.6426 27.4219 30.0664 26.9238 28.9648 25.9277C27.8633 24.9199 27.3125 23.6367 27.3125 22.0781C27.3125 21.1641 27.5176 20.332 27.9277 19.582C28.3496 18.8203 28.8945 18.2109 29.5625 17.7539C30.2422 17.2969 31.0039 16.9512 31.8477 16.7168C32.4688 16.5527 33.4062 16.3945 34.6602 16.2422C37.2148 15.9375 39.0957 15.5742 40.3027 15.1523C40.3145 14.7188 40.3203 14.4434 40.3203 14.3262C40.3203 13.0371 40.0215 12.1289 39.4238 11.6016C38.6152 10.8867 37.4141 10.5293 35.8203 10.5293C34.332 10.5293 33.2305 10.793 32.5156 11.3203C31.8125 11.8359 31.291 12.7559 30.9512 14.0801L27.8574 13.6582C28.1387 12.334 28.6016 11.2676 29.2461 10.459C29.8906 9.63867 30.8223 9.01172 32.041 8.57812C33.2598 8.13281 34.6719 7.91016 36.2773 7.91016C37.8711 7.91016 39.166 8.09766 40.1621 8.47266C41.1582 8.84766 41.8906 9.32227 42.3594 9.89648C42.8281 10.459 43.1562 11.1738 43.3438 12.041C43.4492 12.5801 43.502 13.5527 43.502 14.959V19.1777C43.502 22.1191 43.5664 23.9824 43.6953 24.7676C43.8359 25.541 44.1055 26.2852 44.5039 27H41.1992C40.8711 26.3438 40.6602 25.5762 40.5664 24.6973ZM40.3027 17.6309C39.1543 18.0996 37.4316 18.498 35.1348 18.8262C33.834 19.0137 32.9141 19.2246 32.375 19.459C31.8359 19.6934 31.4199 20.0391 31.127 20.4961C30.834 20.9414 30.6875 21.4395 30.6875 21.9902C30.6875 22.834 31.0039 23.5371 31.6367 24.0996C32.2812 24.6621 33.2188 24.9434 34.4492 24.9434C35.668 24.9434 36.752 24.6797 37.7012 24.1523C38.6504 23.6133 39.3477 22.8809 39.793 21.9551C40.1328 21.2402 40.3027 20.1855 40.3027 18.791V17.6309Z" stroke="black" strokeWidth="2" mask="url(#path-1-outside-1)" />
@@ -25,22 +36,13 @@ function Title() {
                 <path d="M204.553 27V1.23047H207.717V27H204.553Z" stroke="black" strokeWidth="2" mask="url(#path-1-outside-1)" />
             </svg>
 
-            <svg id='setUp' width="243" height="129" viewBox="0 0 243 129" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d)">
-                    <path d="M113.819 120.5C163 56 56 99 78 41C-84.5 -39 67 68 136 46C169.5 33 254.5 14 234.5 1" stroke="black" shapeRendering="crispEdges" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0.948883" y="0.58078" width="241.06" height="128.222" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                        <feOffset dy="4" />
-                        <feGaussianBlur stdDeviation="2" />
-                        <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
+
+            <svg id='tree' width="110" height="273" viewBox="0 0 110 273" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M82 272C36 183.5 82 135 52 64M52 64C75 74 65.5 86.5 82 92M52 64C73 45 93 64 109.5 49.5M52 64C52 34 86.8158 32.5 82 9.5M52 64C36 40.5 56.5 19 36 1M52 64C23.5 54.5 25 28 0 28M52 64C32 73.5 26.5 58 9.5 69.5M52 64C52 94.5 17.5 87 13.5 119.5" stroke="#8ABB64" />
+            </svg>
+
+            <svg id='downwardsTree' width="171" height="400" viewBox="0 0 171 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M142.5 0.5C142.5 0.5 103.5 44.5 118 94.5C132.5 144.5 93.5 188.5 93.5 188.5M93.5 188.5C56.6689 169.626 40 205 20 188.5M93.5 188.5C8.5 206 69.4747 224 1 239M93.5 188.5C58.6944 200.133 75.5 266.5 26.5 287.5M93.5 188.5C79 211 118 249 86.5 270M93.5 188.5C94.6014 223.5 160 222.578 154 270M93.5 188.5C118 219.288 138.5 188.5 163.5 217M93.5 188.5C138 197 122 159.5 170 172M93.5 188.5C75.5 180.5 95.5 158 75.5 159.5" stroke="#8ABB64" />
             </svg>
 
 
