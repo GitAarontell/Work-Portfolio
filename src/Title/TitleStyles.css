@@ -1,7 +1,8 @@
 h1 {
-  z-index: 2;
+  z-index: 5;
   font-size: 30px;
-  color: white;
+  color: black;
+  opacity: 1;
 }
 
 .titlePage {
@@ -9,45 +10,23 @@ h1 {
   width: 100%;
 }
 
-.position {
+img {
   position: absolute;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-/*
-.earth {
-    z-index: 3;
-    position: absolute;
-    background: transparent url(https://toppng.com/uploads/preview/ftestickers-sticker-space-stars-galaxy-nebula-11562984710xri6eg65kn.png) fixed center no-repeat;
-    opacity: 0.3;
-}
-*/
-.stars {
-  background: #000000 url("https://image.ibb.co/mjnygo/stars.png") no-repeat
-    fixed center;
-}
-
-.twinkle {
-  z-index: 1;
-  background: transparent url("https://image.ibb.co/ir1DE8/twinkling.png")
-    repeat fixed center;
-  animation: twinkling 300s linear infinite;
-}
-
-@keyframes twinkling {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 10000px 0;
-  }
+  height: 100%;
 }
 
 .tabs {
+  position: absolute;
+  top: 0;
+  z-index: 3;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 .tabs h1:hover {
@@ -87,41 +66,8 @@ h1 {
   }
 }
 
-.shootingStar {
-  z-index: 2;
-  background: white;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  height: 4px;
-  width: 4px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px rgb(255, 255, 255, 0.1),
-    0 0 0 8px rgb(255, 255, 255, 0.1), 0 0 20px rgb(255, 255, 255, 0.1);
-  animation: fall 10s forwards infinite;
-}
-
-.shootingStar::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 300px;
-  height: 1px;
-  background: linear-gradient(90deg, #fff, transparent);
-}
-
-@keyframes fall {
-  from {
-    transform: rotate(315deg) translateX(2000px);
-  }
-  to {
-    transform: rotate(315deg) translateX(-5000px);
-  }
-}
-
 #name {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -211,7 +157,7 @@ h1 {
 
 @keyframes fill {
   to {
-    fill: white;
+    fill: black;
     stroke-width: 0;
   }
 }

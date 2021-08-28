@@ -1,5 +1,14 @@
 import React from 'react';
 import './TitleStyles.css';
+import background from '../Images/BrownBackground.png';
+import frontClouds from '../Images/FrontClouds.png';
+import backClouds from '../Images/BackClouds.png';
+import foreground from '../Images/Foreground.png';
+import blueRock from '../Images/BlueRock.png';
+import middleLeftRock from '../Images/MiddleLeftRock.png';
+import middleRightRock from '../Images/MiddleRightRock.png';
+import leftBoulder from '../Images/LeftBoulder.png';
+import rightBoulder from '../Images/RightBoulder.png';
 
 function Title() {
     /*
@@ -12,8 +21,20 @@ function Title() {
         the container has to have position relative.*/
     return (
         <div className='titlePage'>
-            <div className='stars position'></div>
-            <div className='twinkle position'></div>
+            <img src={background} alt="space rock" />
+            <img className='set' src={backClouds} alt="" />
+            <img src={blueRock} alt="" />
+            <img className='set' src={frontClouds} alt="" />
+
+            <img src={middleRightRock} alt="" />
+            <img src={leftBoulder} alt="" />      
+            <img src={middleLeftRock} alt="" />
+            <img src={rightBoulder} alt="" />        
+            <img src={foreground} alt="" />
+
+         
+
+
 
             <div className="tabs">
                 <h1>Projects</h1>
@@ -21,8 +42,6 @@ function Title() {
                 <h1>About</h1>
                 <h1>Contact</h1>
             </div>
-
-            <div className='shootingStar'></div>
 
             <svg id='name' width="209" height="29" viewBox="0 0 209 29" fill="#000" xmlns="http://www.w3.org/2000/svg" strokeWidth='1'>
                 <path d="M1.94727 27L11.8438 1.23047H15.5176L26.0645 27H22.1797L19.1738 19.1953H8.39844L5.56836 27H1.94727ZM9.38281 16.418H18.1191L15.4297 9.28125C14.6094 7.11328 14 5.33203 13.6016 3.9375C13.2734 5.58984 12.8105 7.23047 12.2129 8.85938L9.38281 16.418Z" stroke="white" mask="url(#path-1-outside-1)" />
@@ -38,9 +57,9 @@ function Title() {
                 <path d="M196.537 27V1.23047H199.701V27H196.537Z" stroke="white" mask="url(#path-1-outside-1)" />
                 <path d="M204.553 27V1.23047H207.717V27H204.553Z" stroke="white" mask="url(#path-1-outside-1)" />
             </svg>
-            <div className='earth position'>
+            
 
-            </div>
+            
 
         </div>
     );
