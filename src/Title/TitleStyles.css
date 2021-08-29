@@ -1,8 +1,13 @@
 h1 {
   z-index: 5;
+  padding: 0 0 8px 0;
   font-size: 30px;
-  color: black;
+  color: #e6d3ea;
   opacity: 1;
+  background-color: rgb(108, 162, 224);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 0 100%); 
+  font-family: 'Indie Flower', cursive;
 }
 
 .titlePage {
@@ -19,19 +24,22 @@ img {
 }
 
 .tabs {
+  width: 22%;
+  height: 37%;
   position: absolute;
-  top: 0;
+  top: 20%;
+  right: 0;
   z-index: 3;
-  padding-top: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  
 }
 
 .tabs h1:hover {
   cursor: pointer;
-  border-bottom: solid;
+  margin-right: 5%;
 }
 
 .tabs h1:nth-child(1) {
@@ -69,11 +77,11 @@ img {
 #name {
   z-index: 3;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 500px;
-  width: 500px;
+  left: 5%;
+  top: 80%;
+  transform: translate(-5%, -70%);
+  height: 30%;
+  width: 45%;
   animation: fill 1.6s ease forwards 4s;
 }
 
@@ -157,7 +165,7 @@ img {
 
 @keyframes fill {
   to {
-    fill: black;
+    fill: #e6d3ea;
     stroke-width: 0;
   }
 }
