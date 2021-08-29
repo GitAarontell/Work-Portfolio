@@ -52,6 +52,7 @@ function Title() {
                 <path d="M196.537 27V1.23047H199.701V27H196.537Z" stroke="white" mask="url(#path-1-outside-1)" />
                 <path d="M204.553 27V1.23047H207.717V27H204.553Z" stroke="white" mask="url(#path-1-outside-1)" />
             </svg>
+            
 
         </div>
     );

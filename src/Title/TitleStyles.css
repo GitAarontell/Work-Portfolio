@@ -77,8 +77,8 @@ img {
 #name {
   z-index: 3;
   position: absolute;
-  left: 5%;
-  top: 80%;
+  left: 3%;
+  top: 82%;
   transform: translate(-5%, -70%);
   height: 30%;
   width: 45%;
