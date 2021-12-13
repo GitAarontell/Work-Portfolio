@@ -1,14 +1,18 @@
 .skills{
     position: relative;
-    background-color: #440907;
-    height: 35%;
+    background-color: #BD8990;
+    height: 100%;
     width: 100%;
 }
 
 .skills::before{
+    display: inline-block;
+    position: absolute;
+    top: -50px;
+    left: 0;
     content: '';
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #440907, transparent);
+    height: 50px;
+    background: linear-gradient(to top, #BD8990, transparent);
     z-index: 10;
 }
