@@ -1,12 +1,9 @@
-body{
-    overflow-x: hidden;
-}
-
 
 .App{
     position: relative;
     height:100vh;
     width: 100vw;
+    background-color: #9ca0ff;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
