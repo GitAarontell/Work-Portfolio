@@ -21,7 +21,8 @@ function About() {
               dolor sit amet consectetur adipisicing elit. Illo dolorem
               voluptatum rem ipsam sapiente commodi nihil architecto 
               voluptatem, ab eius possimus veniam autem, similique 
-              ducimus voluptates repellat doloremque placeat aliquid!</p>
+              ducimus voluptates repellat doloremque placeat aliquid!
+          </p>
         </div>
       </div>
     </div>
