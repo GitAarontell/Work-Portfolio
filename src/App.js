@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
 import Title from './Title/Title';
 import Skills from './Skills/Skills';
 import Projects from './Projects/Projects';
 import About from './About/About.jsx';
 import Contact from './Contact/Contact.jsx';
+import './App.css';
 
 
 function App() {

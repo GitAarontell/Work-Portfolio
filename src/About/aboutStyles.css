@@ -33,6 +33,15 @@ h2{
     font-family: 'Indie Flower', cursive;
     color: white;
     width: 50%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info p{
+    width: 70%;
 }
 
 .photo{
