@@ -1,4 +1,4 @@
-h1 {
+.tabs a {
   z-index: 5;
   padding: 0 0 8px 0;
   font-size: 30px;
@@ -8,6 +8,7 @@ h1 {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 67%, 0 100%); 
   font-family: 'Indie Flower', cursive;
+  text-decoration: none;
 }
 
 .titlePage {
@@ -37,27 +38,27 @@ h1 {
   
 }
 
-.tabs h1:hover {
+.tabs a:hover {
   cursor: pointer;
   margin-right: 5%;
 }
 
-.tabs h1:nth-child(1) {
+.tabs a:nth-child(1) {
   opacity: 0;
   animation: popUp 1s forwards 5s;
 }
 
-.tabs h1:nth-child(2) {
+.tabs a:nth-child(2) {
   opacity: 0;
   animation: popUp 1s forwards 5.2s;
 }
 
-.tabs h1:nth-child(3) {
+.tabs a:nth-child(3) {
   opacity: 0;
   animation: popUp 1s forwards 5.4s;
 }
 
-.tabs h1:nth-child(4) {
+.tabs a:nth-child(4) {
   opacity: 0;
   animation: popUp 1s forwards 5.6s;
 }
