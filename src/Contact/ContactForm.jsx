@@ -1,43 +1,32 @@
-import React, {useState} from 'react';
+import React from 'react';
+import emailjs from "emailjs-com";
 import './contactStyles.css';
 
-function ContactForm ({setSubmit}) {
- 
-    let [name, setName] = useState('');
-    let [email, setEmail] = useState('');
-    let [comment, setComment] = useState('');
+function ContactForm ({setSent}) {
 
-
-    const handleSubmit = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
 
-        let obj = {
-            name: name,
-            email: email,
-            comment: comment,
-            _captcha: false
-        }
-
-        const response = await fetch('https://formsubmit.co/c71ede746d622cebc4391831d6998860',
-        {
-            method: 'POST',
-            data: JSON.stringify(obj),
-            dataType: "json"
-        }).then(res => {
-            console.log('done');
+        emailjs.sendForm('service_otshkmn', 'contact_form', e.target, '0wcWXpnJcki7LiBGR')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
         });
-        console.log(response);
-        setSubmit(true);
+        setSent(false);
     };
 
-
     return(
-            <form className='formContainer'  required>
-                <input onChange={ e => setName(e.target.value)} type="text" name='usrName' className= 'nameContainer widthSet' placeholder='  Enter name' required/>
-                <input onChange={ e => setEmail(e.target.value)}type='text' name='email' className='nameContainer widthSet' placeholder='  Email Address' required></input>
-                <textarea onChange={ e => setComment(e.target.value)}name="Comment" className='widthSet' id="comments" placeholder='  Enter comments here...' ></textarea>
-
-                <button onClick={() => handleSubmit}>Submit</button>
+            <form className='formContainer' onSubmit={sendEmail} required
+            data-sal="slide-up"
+            data-sal-delay='225'
+            data-sal-duration='500'
+            data-sal-easing="ease-out-bounce">
+                <input type="text" name='name' className= 'nameContainer widthSet' placeholder='  Enter name' required/>
+                <input type='email' name='email' className='nameContainer widthSet' placeholder='  Email Address' required></input>
+                <input type="text" name="subject" className='widthSet' id="subject" placeholder='  Subject' ></input>
+                <textarea name="message" className='widthSet' id="message" placeholder='  Message' ></textarea>
+                <button type='submit'>Submit</button>
             </form>
     );
 

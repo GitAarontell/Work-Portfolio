@@ -10,21 +10,23 @@ import middleRightRock from "../Images/MiddleRightRock-min.png";
 import leftBoulder from "../Images/LeftBoulder-min.png";
 import rightBoulder from "../Images/RightBoulder-min.png";
 
-function Title({ offSetY }) {
+function Title({offSetY, setOffsetY}) {
   /*Lesson: for overflow hidden to work on absolutely positioned elements
         the container has to have position relative.
         Also, overflow-x: hidden blocks scroll event when it is on 
         html and body, to fix, don't put on html element only body.
         */
-
-  //style={{transform: `translateX(${offSetY *-.1}px) translateY(${offSetY * .1}px)`}} was on blue rock
+  let handleClick = () =>{
+    setOffsetY(999);
+  }
   return (
     <div className="titlePage">
-      
-      <img src={background} alt="background" />
+
+      <img src={background} alt="background" 
+      style={{ transform: `translateY(${offSetY * 0.8}px)` }}/>
 
       <img
-        style={{ transform: `translateX(${offSetY * 0.5}px)` }}
+        style={{ transform: `translate(${offSetY * 0.5}px, ${offSetY * 0.8}px)`}}
         className="set"
         src={backClouds}
         alt="back clouds"
@@ -32,43 +34,49 @@ function Title({ offSetY }) {
 
       <img
         src={blueRock}
-        style={{ transform: `translateY(${offSetY * 0.7}px)` }}
+        style={{ transform: `translateY(${offSetY * 0.9}px)` }}
         alt="background rock"
       />
 
       <img
-        style={{ transform: `translateX(${offSetY * -0.5}px)` }}
+        style={{ transform: `translate(${offSetY * -0.5}px, ${offSetY * 0.8}px)`}}
         id="frontClouds"
         src={frontClouds}
         alt=""
       />
 
       <img
-        style={{ transform: `translateY(${offSetY * 0.8}px)` }}
+        style={{ transform: `translateY(${offSetY * 0.9}px)` }}
         src={middleRightRock}
         alt=""
       />
 
       <img
-        style={{ transform: `translateY(${offSetY * 0.8}px)` }}
+        style={{ transform: `translateY(${offSetY * 0.9}px)` }}
         src={middleLeftRock}
         alt=""
       />
-      <img src={leftBoulder} alt="" />
+      <img
+        style={{ transform: `translateY(${offSetY * 0.8}px)` }}
+        src={leftBoulder} alt="" />
 
-      <img src={rightBoulder} alt="" />
+      <img 
+        style={{ transform: `translateY(${offSetY * 0.8}px)` }}
+      src={rightBoulder} alt="" />
 
-      <img src={foreground} alt="" />
+      <img src={foreground}
+      style={{ transform: `translateY(${offSetY * 0.8}px)` }} alt="" />
 
-      <div className="tabs">
-        <h1>Projects</h1>
-        <h1>Skills</h1>
-        <h1>About</h1>
-        <h1>Contact</h1>
+      <div className="tabs"
+      style={{ transform: `translateY(${offSetY * 0.8}px)` }}>
+        <a onClick={handleClick} href='#projectsContainer'>Projects</a>
+        <a onClick={handleClick} href='#skillsContainer'>Skills</a>
+        <a onClick={handleClick} href='#aboutContainer'>About</a>
+        <a onClick={handleClick} href='#contactContainer'>Contact</a>
       </div>
 
       <svg
-        style={{ transform: `translateY(${offSetY * 0.5}px)` }}
+        style={{ transform: `translateY(${offSetY * 1.5}px` }}
         id="name"
         width="209"
         height="29"

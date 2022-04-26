@@ -3,6 +3,7 @@
     z-index: 20;
     background-color: #4d1a1a;
     padding-bottom: 5vh;
+    margin-top: -1px;
 }
 
 .projectPhoto{
@@ -11,6 +12,11 @@
     width: auto;
     box-shadow: 0px 0px 10px rgb(185, 185, 185);
     margin: 25px 25px 25px 25px;
+}
+
+.projectPhoto:hover{
+    box-shadow: 0px 0px 50px rgb(185, 185, 185);
+    transform: scale(1.05);
 }
 
 .flex{

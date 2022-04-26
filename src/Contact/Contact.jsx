@@ -1,18 +1,12 @@
-import React, {useState} from 'react';
-import ContactForm from './ContactForm.jsx';
+import React from 'react';
+import Switch from '../Switch/Switch.jsx';
 import './contactStyles.css';
 
-function Contact () {
-
-    let [submit, setSubmit] = useState(false);
-
-
+function Contact ({offSetY, sent, setSent}) {
     return(
-        <div className='contactContainer'>
+        <div id='contactContainer' className='contactContainer' style={{ transform: `translateY(${offSetY * 0.8}px)` }}>
             <h2>Contact</h2>
-
-
-           <ContactForm setSubmit={setSubmit}/>
+           <Switch sent={sent} setSent={setSent}></Switch>
         </div>
     );
 }
