@@ -17,24 +17,12 @@ function About({offSetY}) {
           />
         </div>
         <div className="info">
-<<<<<<< HEAD
-          <p> Lorem ipsum dolor sit amet consectetur 
-              adipisicing elit. Quaerat, voluptates adipisci. Numquam 
-              velit tempora incidunt maiores deleniti harum accusamus! 
-              Optio ipsum molestiae fugit repellendus excepturi 
-              temporibus beatae magnam sit reprehenderit. Lorem ipsum 
-              dolor sit amet consectetur adipisicing elit. Illo dolorem
-              voluptatum rem ipsam sapiente commodi nihil architecto 
-              voluptatem, ab eius possimus veniam autem, similique 
-              ducimus voluptates repellat doloremque placeat aliquid!
-=======
           <p>
             Hello, my name is Aaron. I love all things design and programming related.
             I have grown proficient with various tools like React, npm, and Git. I have built multiple
             kinds of projects using different languages, libraries and
             technologies. When I am not studying for school, I spend my time
 
->>>>>>> features
           </p>
         </div>
       </div>
