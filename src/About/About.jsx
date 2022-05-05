@@ -21,7 +21,7 @@ function About({offSetY}) {
             Hello, my name is Aaron. I love all things design and programming related.
             I have grown proficient with various tools like React, npm, and Git. I have built multiple
             kinds of projects using different languages, libraries and
-            technologies. When I am not studying for school, I spend my time
+            technologies. I am currently pursuing a bachelors in computer science at Oregon State University, and hope to graduate in the Spring of 2023. 
 
           </p>
         </div>
