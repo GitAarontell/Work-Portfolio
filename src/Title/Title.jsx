@@ -20,6 +20,7 @@ function Title({offSetY, setOffsetY}) {
   let handleClick = () =>{
     setOffsetY(999);
   }
+
   return (
     <div className="titlePage">
 
