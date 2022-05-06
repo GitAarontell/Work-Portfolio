@@ -25,10 +25,21 @@ function App() {
 
   // overflow-x: hidden causing issues with getting window y-offset, overflow-x was not working on mobile
   // so instead used the event object to get scrolltop since offset y not working with overflow hidden
-  const handleScroll = (e) => {
-    if (e.target.scrollTop < 1000) {
-      setOffsetY(e.target.scrollTop);
-    } 
+  let handleScroll
+
+  if(('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
+    handleScroll = (e) => {
+      if (e.target.scrollTop < 500) {
+        setOffsetY(e.target.scrollTop);
+        console.log("hello")
+      } 
+    }
+  }else {
+    handleScroll = (e) => {
+      if (e.target.scrollTop < 1000) {
+        setOffsetY(e.target.scrollTop);
+      } 
+    }
   }
 
   sal();

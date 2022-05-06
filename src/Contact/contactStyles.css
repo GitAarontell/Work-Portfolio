@@ -29,7 +29,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 1000px;
 }
 
 .formContainer input, textarea{
@@ -71,4 +71,16 @@ h2{
     border-radius: 10px;
     font-family: 'Indie Flower', cursive;
     font-size: 25px;
+}
+
+@media(max-width: 500px){
+    .formContainer{
+        width: 800px;
+    }
+}
+
+@media(max-width: 345px){
+    .formContainer{
+        width: 600px;
+    }
 }
