@@ -29,8 +29,8 @@ function App() {
 
   if(('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
     handleScroll = (e) => {
-      if (e.target.scrollTop < 1000) {
-        setOffsetY(e.target.scrollTop * 2);
+      if (e.target.scrollTop < 500) {
+        setOffsetY(e.target.scrollTop * .8);
       } 
     }
   }else {
