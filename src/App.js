@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Title from './Title/Title';
-import Skills from './Skills/Skills';
-import Projects from './Projects/Projects';
-import About from './About/About.jsx';
-import Contact from './Contact/Contact.jsx';
+import DeskMobSwitch from './Mobile/DeskMobSwitch.jsx';
 import { DiBootstrap, DiReact, DiJqueryLogo, DiNodejs, DiGithubFull} from "react-icons/di";
 import {SiRedux, SiCss3, SiMongodb} from 'react-icons/si';
 import {AiFillHtml5} from 'react-icons/ai'
@@ -34,39 +30,20 @@ function App() {
     setWidth(window.innerWidth);
   }
 
-  let handleScroll;
-
-  let handleClick;
-
-  if (width < 500) {
-    handleClick = () =>{
-      setOffsetY(0)
+  let handleScroll = (e) => {
+    if (e.target.scrollTop < 1000) {
+      setOffsetY(e.target.scrollTop);
     }
+  };
 
-    handleScroll = (e) => {
-      
-    }
-  } else {
-    handleClick = () =>{
-      setOffsetY(999);
-    }
-
-    handleScroll = (e) => {
-      if (e.target.scrollTop < 1000) {
-        setOffsetY(e.target.scrollTop);
-      }
-    }
-  }
+  let handleClick = () =>{
+    setOffsetY(999);
+  };
 
   sal();
-
   return (
     <div className="App">
-      <Title offSetY={offSetY} setOffsetY={setOffsetY} handleClick={handleClick}></Title>
-      <Skills offSetY={offSetY} icons={icons}></Skills>
-      <Projects offSetY={offSetY}></Projects>
-      <About offSetY={offSetY}></About>
-      <Contact offSetY={offSetY} sent={sent} setSent={setSent}></Contact>
+      <DeskMobSwitch offSetY={offSetY} handleClick={handleClick} icons={icons} sent={sent} setSent={setSent} width={width}></DeskMobSwitch>
     </div>
   );
 }

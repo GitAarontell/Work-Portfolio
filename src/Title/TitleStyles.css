@@ -315,6 +315,15 @@
     left: -100%;
     width: auto;
   }
+
+  .tabs{
+    font-size: 18px;
+  }
+
+  #name{
+    left: 50%;
+    top: 75%;
+  }
 }
 
 @media(max-height: 782px) and (max-width: 372px){
@@ -337,9 +346,6 @@
     width: auto;
   }
 
-  .tabs{
-    font-size: 18px;
-  }
 }
 
 @media(max-height: 782px) and (max-width: 307px){

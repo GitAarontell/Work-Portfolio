@@ -10,14 +10,13 @@ import middleRightRock from "../Images/MiddleRightRock-min.png";
 import leftBoulder from "../Images/LeftBoulder-min.png";
 import rightBoulder from "../Images/RightBoulder-min.png";
 
-function Title({offSetY, setOffsetY, handleClick}) {
+function Title({offSetY, handleClick}) {
       /*
         Lesson: for overflow hidden to work on absolutely positioned elements
         the container has to have position relative.
         Also, overflow-x: hidden blocks scroll event when it is on 
         html and body, to fix, don't put on html element only body.
       */
-
 
   return (
     <div className="titlePage">
