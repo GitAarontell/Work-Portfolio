@@ -15,27 +15,54 @@ import sal from 'sal.js'
 function App() {
   const [offSetY, setOffsetY] = useState(0);
   let [sent, setSent] = useState(true);
-
+  let [width, setWidth] = useState(window.innerWidth)
   let icons = [<DiJqueryLogo/>, <DiBootstrap/>, <DiReact/>, <DiGithubFull/>, <AiFillHtml5/>, <SiRedux/>, <SiCss3/>, <SiMongodb/>, <DiNodejs/>]
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, true);
-    return window.removeEventListener('scroll', handleScroll);
-  })
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleWindowSizeChange);
+    };
+  }, [])
 
   // overflow-x: hidden causing issues with getting window y-offset, overflow-x was not working on mobile
   // so instead used the event object to get scrolltop since offset y not working with overflow hidden
-  const handleScroll = (e) => {
-    if (e.target.scrollTop < 1000) {
-      setOffsetY(e.target.scrollTop);
-    } 
+
+  let handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+  }
+
+  let handleScroll;
+
+  let handleClick;
+
+  if (width < 500) {
+    handleClick = () =>{
+      setOffsetY(0)
+    }
+
+    handleScroll = (e) => {
+      
+    }
+  } else {
+    handleClick = () =>{
+      setOffsetY(999);
+    }
+
+    handleScroll = (e) => {
+      if (e.target.scrollTop < 1000) {
+        setOffsetY(e.target.scrollTop);
+      }
+    }
   }
 
   sal();
 
   return (
     <div className="App">
-      <Title offSetY={offSetY} setOffsetY={setOffsetY}></Title>
+      <Title offSetY={offSetY} setOffsetY={setOffsetY} handleClick={handleClick}></Title>
       <Skills offSetY={offSetY} icons={icons}></Skills>
       <Projects offSetY={offSetY}></Projects>
       <About offSetY={offSetY}></About>
