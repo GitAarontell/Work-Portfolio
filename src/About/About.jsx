@@ -10,12 +10,6 @@ function About({offSetY}) {
         data-sal-delay='225'
         data-sal-duration='500'
         data-sal-easing="ease-out-bounce">
-        <div className="photo">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuhGiFe8oRDfMm4RQgXz7Mw03E-wUtvlTuHNrn2jJclf5zFi-9dmy9mkkOCdqdM2it8yg&usqp=CAU"
-            alt=""
-          />
-        </div>
         <div className="info">
           <p>
             Hello, my name is Aaron. I love all things design and programming related.
